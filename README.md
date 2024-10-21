@@ -206,13 +206,24 @@ Install the required packages by running the following command in the terminal
 Step 4:
 Run the following command in the terminal
 
-    export FLASK_APP=FLASK_APP=fitnessapp && export FLASK_ENV=development && FLASK_DEBUG=1 && flask run
+  ```
+  export FLASK_APP=FLASK_APP=fitnessapp && export FLASK_ENV=development && FLASK_DEBUG=1 && flask run
+
+  celery -A make_celery worker -B --loglevel=info
+
+  celery -A make_celery inspect registered # to check for all registered tasks
+
+  ```
+
+
 
 Step 5:
 Open the URL in your browser:  
  http://127.0.0.1:5000/
 
 NOTE!!:
+Make sure you have redis install on your local machine for background tasks with celery to work. see https://redis.io/docs/latest/operate/oss_and_stack/install/
+
 If you get error regarding any of the following packages - pymongo and bson, then dont worry we have also been there. Run the following commands to resolve the error :
 
     pip uninstall bson
