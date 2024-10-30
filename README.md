@@ -40,24 +40,24 @@ https://youtu.be/CvR6jDlQnB8
 <a href="https://img.shields.io/github/repo-size/VibhavDeo/FitnessApp" alt="repo size">
 <img src="https://img.shields.io/github/repo-size/VibhavDeo/FitnessApp" /></a>
 
-# BurnOut
+# ENERGIZE
 
 ![WhatsApp Image 2021-09-28 at 2 48 00 PM](https://user-images.githubusercontent.com/25662536/135546154-cfae1d2e-439a-4edc-b0bb-57f693ef5a83.jpeg)
 
-# BurnOut - Your Wellness Companion
+# ENERGIZE - Your Wellness Companion
 
-BurnOut is an easy-to-use application designed to help users manage their daily calorie intake and expenditure, and it has now been enhanced with additional features. This all-in-one wellness app is not only a user-friendly calorie tracker but also offers a comprehensive suite of tools to support individuals in achieving their fitness and weight management goals.
+ENERGIZE is an easy-to-use application designed to help users manage their daily calorie intake and expenditure, and it has now been enhanced with additional features. This all-in-one wellness app is not only a user-friendly calorie tracker but also offers a comprehensive suite of tools to support individuals in achieving their fitness and weight management goals.
 
 <img src = "https://github.com/CSC510-GROUP-40/FitnessApp/assets/145216300/e4fc29ea-253c-4bfc-803c-80bf55193044" width="700px">
 
 
 ## Key Features:
 
-1. **Calorie Tracking:** BurnOut allows users to effortlessly keep track of their daily calorie intake and calories burnt through physical activities, helping them maintain a healthy lifestyle.
+1. **Calorie Tracking:** ENERGIZE allows users to effortlessly keep track of their daily calorie intake and calories burnt through physical activities, helping them maintain a healthy lifestyle.
 
 2. **Profile Customization:** Users can personalize their profiles by entering their height, weight, fitness goals (weight loss or gain), and target weight. This information is crucial for creating tailored fitness and dietary plans.
 
-3. **Fitness Programs:** BurnOut offers a variety of fitness programs, including yoga classes and workout sessions, catering to users with different fitness preferences and skill levels.
+3. **Fitness Programs:** ENERGIZE offers a variety of fitness programs, including yoga classes and workout sessions, catering to users with different fitness preferences and skill levels.
 
 4. **Social Connectivity:** The application facilitates social interaction among users. They can connect with friends by sending and accepting friend requests, enabling them to share their fitness journeys and progress, and provide support and motivation to one another.
 
@@ -65,20 +65,20 @@ BurnOut is an easy-to-use application designed to help users manage their daily 
 
 6. **BMI Calculator:** The newly added BMI (Body Mass Index) calculator helps users understand their current physical health status and aids in setting realistic weight management goals.
 
-7. **Tracking User History:** BurnOut enables users to maintain a history of their fitness and dietary activities, providing insights into their progress over time and allowing for data-driven adjustments.
+7. **Tracking User History:** ENERGIZE enables users to maintain a history of their fitness and dietary activities, providing insights into their progress over time and allowing for data-driven adjustments.
 
 8. **Reviews:** Users can leave reviews and feedback on the fitness programs they've participated in, sharing their experiences with the community and helping others make informed choices.
 
-This document serves as a comprehensive reference point for users, giving them insight into the functionalities of BurnOut and encouraging them to participate in its development as an open-source software project. As an open-source project, the community can contribute additional features and enhancements to make BurnOut even more robust and tailored to individual needs before its official market release. Furthermore, it assists developers by providing a clear understanding of the codebase and serves as a valuable resource for the project's continued development.
+This document serves as a comprehensive reference point for users, giving them insight into the functionalities of ENERGIZE and encouraging them to participate in its development as an open-source software project. As an open-source project, the community can contribute additional features and enhancements to make ENERGIZE even more robust and tailored to individual needs before its official market release. Furthermore, it assists developers by providing a clear understanding of the codebase and serves as a valuable resource for the project's continued development.
 
 # Table of Contents
 
 - [Link to demo/walkthrough video:](#link-to-demowalkthrough-video)
-- [BurnOut](#burnout)
-- [BurnOut - Your Wellness Companion](#burnout---your-wellness-companion)
+- [ENERGIZE](#ENERGIZE)
+- [ENERGIZE - Your Wellness Companion](#ENERGIZE---your-wellness-companion)
   - [Key Features:](#key-features)
 - [Table of Contents](#table-of-contents)
-- [Why use BurnOut?](#why-use-burnout)
+- [Why use ENERGIZE?](#why-use-ENERGIZE)
 - [TechStack Used for the Development of Project](#techstack-used-for-the-development-of-project)
 - [Core Functionalities of the Application](#core-functionalities-of-the-application)
   - [Register](#register)
@@ -108,7 +108,7 @@ This document serves as a comprehensive reference point for users, giving them i
 - [Contribution](#contribution)
 - [License](#license)
 
-# Why use BurnOut?
+# Why use ENERGIZE?
 
 - User can keep a track of their calorie intake.
 - User just needs to input the food they've had, calories get calculated automatically.

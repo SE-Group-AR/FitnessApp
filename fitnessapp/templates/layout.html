@@ -17,20 +17,20 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     {% if title %}
-      <title>BURNOUT - {{ title }}</title>
+      <title>ENERGIZE - {{ title }}</title>
     {% else %}
-      <title>BURNOUT</title>
+      <title>ENERGIZE</title>
     {% endif %}
 </head>
 <body>
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         {% if not session.get("email") %}
-              <a class="navbar-brand fs-4" href="{{url_for('login')}}">BURNOUT</a>
+              <a class="navbar-brand fs-4" href="{{url_for('login')}}">ENERGIZE</a>
               {% else %}
               <a class="navbar-brand d-flex align-items-center" href="{{url_for('dashboard')}}">
                   <img src="static/img/fire.gif" alt="Logo" style="width:98px; height:38px;" class="me-2">
-                  BURNOUT
+                  ENERGIZE
               </a>
               {% endif %}
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -115,7 +115,7 @@
           <div class="container text-center text-md-left">
               <div class="row text-center text-md-left">
                   <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                      <h5 class="text-uppercase mb-4 font-weight-bold text-warning">BURNOUT</h5>
+                      <h5 class="text-uppercase mb-4 font-weight-bold text-warning">ENERGIZE</h5>
                       <p class="small text-white">Turning excuses into results.....</p>
                   </div>
                   <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">

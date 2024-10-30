@@ -3,12 +3,12 @@
 Copyright (c) 2023 Rajat Chandak, Shubham Saboo, Vibhav Deo, Chinmay Nayak
 This code is licensed under MIT license (see LICENSE for details)
 
-@author: Burnout
+@author: ENERGIZE
 
 
-This python file is used in and is part of the Burnout project.
+This python file is used in and is part of the ENERGIZE project.
 
-For more information about the Burnout project, visit:
+For more information about the ENERGIZE project, visit:
 https://github.com/VibhavDeo/FitnessApp
 
 """
@@ -62,7 +62,7 @@ def reminder_email():
             print(recipientlst)
 
             server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-            sender_email = "burnoutapp2023@gmail.com"
+            sender_email = "ENERGIZEapp2023@gmail.com"
             sender_password = "jgny mtda gguq shnw"
 
             server.login(sender_email, sender_password)
@@ -204,7 +204,7 @@ def calories():
     calorie() function displays the Calorieform (calories.html) template
     route "/calories" will redirect to calories() function.
     CalorieForm() called and if the form is submitted then various values are fetched and updated into the database entries
-    Input: Email, date, food, burnout
+    Input: Email, date, food, ENERGIZE
     Output: Value update in database and redirected to home page
     """
     now = datetime.now()
@@ -219,16 +219,16 @@ def calories():
                 food = request.form.get('food')
                 cals = food.split(" ")
                 cals = int(cals[-1][1:-1])
-                burn = request.form.get('burnout')
+                burn = request.form.get('ENERGIZE')
 
                 temp = current_app.mongo.db.calories.find_one(
-                    {'email': email}, {'email', 'calories', 'burnout', 'date'})
+                    {'email': email}, {'email', 'calories', 'ENERGIZE', 'date'})
                 if temp is not None and temp['date'] == str(now):
                     current_app.mongo.db.calories.update_many({'email': email}, {'$set': {
-                                                              'calories': temp['calories'] + cals, 'burnout': temp['burnout'] + int(burn)}})
+                                                              'calories': temp['calories'] + cals, 'ENERGIZE': temp['ENERGIZE'] + int(burn)}})
                 else:
                     current_app.mongo.db.calories.insert(
-                        {'date': now, 'email': email, 'calories': cals, 'burnout': int(burn)})
+                        {'date': now, 'email': email, 'calories': cals, 'ENERGIZE': int(burn)})
                 flash(f'Successfully updated the data', 'success')
                 return redirect(url_for('calories'))
     else:
@@ -365,7 +365,7 @@ def ajaxhistory():
     # route "/ajaxhistory" will redirect to ajaxhistory() function.
     # Details corresponding to given email address are fetched from the database entries
     # Input: Email, date
-    # Output: date, email, calories, burnout
+    # Output: date, email, calories, ENERGIZE
     # ##########################
     email = get_session = session.get('email')
     print(email)
@@ -373,12 +373,12 @@ def ajaxhistory():
         if request.method == "POST":
             date = request.form.get('date')
             res = current_app.mongo.db.calories.find_one({'email': email, 'date': date}, {
-                'date', 'email', 'calories', 'burnout'})
+                'date', 'email', 'calories', 'ENERGIZE'})
             if res:
-                return json.dumps({'date': res['date'], 'email': res['email'], 'burnout': res['burnout'], 'calories': res['calories']}), 200, {
+                return json.dumps({'date': res['date'], 'email': res['email'], 'ENERGIZE': res['ENERGIZE'], 'calories': res['calories']}), 200, {
                     'ContentType': 'application/json'}
             else:
-                return json.dumps({'date': "", 'email': "", 'burnout': "", 'calories': ""}), 200, {
+                return json.dumps({'date': "", 'email': "", 'ENERGIZE': "", 'calories': ""}), 200, {
                     'ContentType': 'application/json'}
 
 
@@ -463,17 +463,17 @@ def send_email():
     email = session.get('email')
     temp = current_app.mongo.db.user.find_one({'email': email}, {'name'})
     data = list(current_app.mongo.db.calories.find(
-        {'email': email}, {'date', 'email', 'calories', 'burnout'}))
-    table = [['Date', 'Email ID', 'Calories', 'Burnout']]
+        {'email': email}, {'date', 'email', 'calories', 'ENERGIZE'}))
+    table = [['Date', 'Email ID', 'Calories', 'ENERGIZE']]
     for a in data:
-        tmp = [a['date'], a['email'], a['calories'], a['burnout']]
+        tmp = [a['date'], a['email'], a['calories'], a['ENERGIZE']]
         table.append(tmp)
 
     friend_email = str(request.form.get('share')).strip()
     friend_email = str(friend_email).split(',')
     server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
     # Storing sender's email address and password
-    sender_email = "burnoutapp2023@gmail.com"
+    sender_email = "ENERGIZEapp2023@gmail.com"
     sender_password = "jgny mtda gguq shnw"
 
     # Logging in with sender details

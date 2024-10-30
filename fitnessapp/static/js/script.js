@@ -39,8 +39,8 @@ function history(e){
             $("#calories_legend").empty().append("Calories: ")
             $("#calories").empty().append(resdata.calories)
 
-            $("#burnout_legend").empty().append("Burnout: ")
-            $("#burnout").empty().append(resdata.burnout)
+            $("#ENERGIZE_legend").empty().append("ENERGIZE: ")
+            $("#ENERGIZE").empty().append(resdata.ENERGIZE)
 
             $("#history-data").empty().append(JSON.stringify(response));
         }
