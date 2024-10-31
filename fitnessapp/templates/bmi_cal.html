@@ -1,66 +1,62 @@
-{% extends "layout.html" %} {% block content %}
+{% extends "layout.html" %}
+{% block content %}
 <div class="container">
-  <h1 style="color: white">BMI Calculator</h1>
+  <h1 class="text-white">BMI Calculator</h1>
   <div class="main-content">
-    <p style="color: white">
-      Body Mass Index (BMI) is a measure of body fat based on your weight and
-      height. It is a simple and useful tool to estimate whether you are
-      underweight, at a healthy weight, overweight, or obese.
+    <p class="text-white">
+      Body Mass Index (BMI) is a measure of body fat based on your weight and height.
+      It is a simple and useful tool to estimate whether you are underweight, at a healthy
+      weight, overweight, or obese.
     </p>
-    <p style="color: white">
-      To calculate your BMI, enter your weight (in kilograms) and height (in
-      centimeters) below:
+    <p class="text-white">
+      To calculate your BMI, enter your weight (in kilograms) and height (in centimeters) below:
     </p>
 
     <div class="content-section">
       <form class="form-group" method="POST" action="/bmi_calc" id="bmi-form">
       
         <div class="form-group">
-          <label for="weight">Weight in kgs:</label>
-          <input type="text" class="form-control"  name="weight"  id="weight" >
+          <label for="weight" class="form-control-label">Weight in kgs:</label>
+          <input type="number" class="form-control" name="weight" id="weight" min="1" aria-label="Enter your weight in kilograms" required>
         </div>
 
         <div class="form-group">
-          <label for="height">Height in cms:</label>
-          <input type="text" class="form-control" name="height"  id="height" >
+          <label for="height" class="form-control-label">Height in cms:</label>
+          <input type="number" class="form-control" name="height" id="height" min="1" aria-label="Enter your height in centimeters" required>
         </div>
        
-        <button
-          type="submit"
-          class="btn btn-warning"
-          value="Submit"
-        >
+        <button type="submit" class="btn btn-warning" value="Submit">
           Calculate BMI
         </button>
       </form>
     </div>
-    <p style="color: white; text-align: center" class="display-4">
-      Your BMI is {{ bmi }}.
-    </p>
-    <p style="color: white; text-align: center" class="display-6">You are</p>
-    <p style="color: white; text-align: center" style="color: white">
-      {% if bmi_category == 'Underweight' %}
-      <span class="underweight display-6; text-align: center"
-        >{{ bmi_category }}</span
-      >
-      {% elif bmi_category == 'Normal Weight' %}
-      <span class="normal display-6; text-align: center"
-        >{{ bmi_category }}</span
-      >
-      {% elif bmi_category == 'Overweight' %}
-      <span class="overweight display-6; text-align: center"
-        >{{ bmi_category }}</span
-      >
-      {% elif bmi_category == 'Obese' %}
-      <span class="obese display-6; text-align: center display-6"
-        >{{ bmi_category }}</span
-      >
-      {% elif bmi_category == 'Invalid Category' %}
-      <span class="obese display-6; text-align: center display-6"
-        >{{ bmi_category }}</span
-      >
-      {% endif %}
-    </p>
+    
+    {% if bmi %}
+      <p class="text-white text-center display-4">Your BMI is {{ bmi }}.</p>
+      <p class="text-white text-center display-6">You are</p>
+      <p class="text-white text-center display-6">
+        {% if bmi_category == 'Underweight' %}
+          <span class="underweight">{{ bmi_category }}</span>
+        {% elif bmi_category == 'Normal Weight' %}
+          <span class="normal">{{ bmi_category }}</span>
+        {% elif bmi_category == 'Overweight' %}
+          <span class="overweight">{{ bmi_category }}</span>
+        {% elif bmi_category == 'Obese' %}
+          <span class="obese">{{ bmi_category }}</span>
+        {% else %}
+          <span class="invalid">{{ bmi_category }}</span>
+        {% endif %}
+      </p>
+    {% endif %}
   </div>
 </div>
+
+<style>
+  .text-white { color: white; }
+  .underweight { color: #87CEFA; }
+  .normal { color: #32CD32; }
+  .overweight { color: #FFA500; }
+  .obese { color: #FF4500; }
+  .invalid { color: #FF6347; }
+</style>
 {% endblock content %}

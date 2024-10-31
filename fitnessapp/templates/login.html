@@ -1,51 +1,56 @@
 {% extends "layout.html" %}
 {% block content %}
     <div class="content-section my-4">
-        <form method="POST" action="">
+        <form method="POST" action="" aria-labelledby="login-form">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Log In</legend>
+                <legend class="border-bottom mb-4" id="login-form">Log In</legend>
+                
                 <div class="form-group">
-                    {{ form.email.label(class="form-control-label") }}
+                    {{ form.email.label(class="form-control-label", **{"aria-label": "Email Address"}) }}
                     {% if form.email.errors %}
-                        {{ form.email(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
+                        {{ form.email(class="form-control form-control-lg is-invalid", **{"aria-describedby": "email-error"}) }}
+                        <div class="invalid-feedback" id="email-error">
                             {% for error in form.email.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.email(class="form-control form-control-lg") }}
+                        {{ form.email(class="form-control form-control-lg", **{"aria-label": "Email Address"}) }}
                     {% endif %}
                 </div>
+                
                 <div class="form-group">
-                    {{ form.password.label(class="form-control-label") }}
+                    {{ form.password.label(class="form-control-label", **{"aria-label": "Password"}) }}
                     {% if form.password.errors %}
-                        {{ form.password(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
+                        {{ form.password(class="form-control form-control-lg is-invalid", **{"aria-describedby": "password-error"}) }}
+                        <div class="invalid-feedback" id="password-error">
                             {% for error in form.password.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.password(class="form-control form-control-lg") }}
+                        {{ form.password(class="form-control form-control-lg", **{"aria-label": "Password"}) }}
                     {% endif %}
                 </div>
             </fieldset>
+
             <div class="form-group">
-                {{ form.submit(class="btn btn-outline-info") }}
+                {{ form.submit(class="btn btn-outline-info", **{"aria-label": "Log In"}) }}
             </div>
+
             <small class="text-muted ml-2">
-                <a href="{{url_for('login')}}">Forgot Password?</a>
+                <a href="{{url_for('login')}}" aria-label="Forgot Password?">Forgot Password?</a>
             </small>
             <small class="text-muted ml-2">
-                <a href="{{url_for('auth.google_login')}}">Sign In With Google</a>
+                <a href="{{url_for('auth.google_login')}}" aria-label="Sign In With Google">Sign In With Google</a>
             </small>
         </form>
     </div>
+    
     <div class="border-top pt-3">
         <small class="text-muted">
-            Need An Account? <a class="ml-2" href="{{ url_for('register') }}">Sign Up Now</a>
+            Need An Account? <a class="ml-2" href="{{ url_for('register') }}" aria-label="Sign Up Now">Sign Up Now</a>
         </small>
     </div>
 {% endblock content %}

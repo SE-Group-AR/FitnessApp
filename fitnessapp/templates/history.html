@@ -1,43 +1,37 @@
-{% extends "layout.html" %} {% block content %}
+{% extends "layout.html" %} 
+{% block content %}
 <div class="content-section d-flex vh-80">
-  <form
-    method="POST"
-    onSubmit="event.preventDefault(); return history(event)"
-    name="historyForm"
-  >
-    {{ form.hidden_tag() }}
-    <fieldset class="form-group">
-      <legend class="border-bottom mb-4">History</legend>
-      <div class="form-group">
-        <label class="form-control-label">Date</label>
-        <input type="date" name="date" required />
-      </div>
-    </fieldset>
-    <div class="form-group">
-      {{ form.submit(class="btn btn-outline-info") }}
-    </div>
-  </form>
+    <form
+        method="POST"
+        onSubmit="event.preventDefault(); return history(event)"
+        name="historyForm"
+        aria-labelledby="history-form-title"
+    >
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4" id="history-form-title">History</legend>
+            <div class="form-group">
+                <label for="date-input" class="form-control-label">Date</label>
+                <input type="date" name="date" id="date-input" required aria-required="true" />
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-outline-info", **{"aria-label": "Submit history form"}) }}
+        </div>
+    </form>
 </div>
-<div id="history-data card">
-  <h5 class="card-header" style="color: white">History</h5>
-  <div class="card-body">
-    <p class="border-bottom mb-4 h6" style="color: white" id="date_legend"></p>
-    <p class="card-text" style="color: white" id="date"></p>
-    <br />
-    <p
-      class="border-bottom mb-4 h6"
-      style="color: white"
-      id="calories_legend"
-    ></p>
-    <p class="card-text" id="calories" style="color: white"></p>
-    <br />
-    <p
-      class="border-bottom mb-4 h6"
-      style="color: white"
-      id="ENERGIZE_legend"
-    ></p>
-    <p class="card-text" id="ENERGIZE" style="color: white"></p>
-    <br />
-  </div>
+
+<div id="history-data" class="card">
+    <h5 class="card-header text-light">History</h5>
+    <div class="card-body">
+        <p class="border-bottom mb-4 h6 text-light" id="date_legend">Selected Date:</p>
+        <p class="card-text text-light" id="date"></p>
+        
+        <p class="border-bottom mb-4 h6 text-light" id="calories_legend">Calories:</p>
+        <p class="card-text text-light" id="calories"></p>
+        
+        <p class="border-bottom mb-4 h6 text-light" id="ENERGIZE_legend">Energize Score:</p>
+        <p class="card-text text-light" id="ENERGIZE"></p>
+    </div>
 </div>
 {% endblock content %}

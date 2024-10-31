@@ -1,71 +1,68 @@
 {% extends "layout.html" %}
 {% block content %}
-<html></html>
-<head>
-    <meta charset="UTF-8">
-    <title>Your Data</title>
-</head>
-<body>
-    <h1 class="my-4" style="color: white;">Your Data</h1>
+<div class="container my-4">
+    <header>
+        <h1 class="my-4 text-light" id="data-title">Your Data</h1>
+    </header>
 
-</body>
-
-<div class="row">
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card"><img class="img-thumbnail img-fluid" src="../static/img/height.jpg">
-            <div class="card-body">
-                <h4 class="card-title">Your Height</h4>
-                <p class="card-text">{{ user_data.height }} cms<br><br></p>
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+                <img src="../static/img/height.jpg" class="img-thumbnail img-fluid" alt="Height illustration">
+                <div class="card-body">
+                    <h2 class="card-title">Your Height</h2>
+                    <p class="card-text" aria-labelledby="height">{{ user_data.height }} cms</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card"><img class="img-thumbnail img-fluid" src="../static/img/weight.png">
-            <div class="card-body">
-                <h4 class="card-title">Your Weight</h4>
-                <p class="card-text">{{ user_data.weight }} kgs<br><br></p>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card"><img class="img-thumbnail img-fluid" src="../static/img/weightgoal.jpg"></a>
-            <div class="card-body">
-                <h4 class="card-title">Your Target Weight</h4>
-                <p class="card-text">{{ user_data.target_weight }} Kgs<br><br></p>
-            </div>
-        </div>
-    </div>
-</div>
-<section class="container-fluid ">
-    <div class="container site-section" id="yoga-1">
         
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+                <img src="../static/img/weight.png" class="img-thumbnail img-fluid" alt="Weight illustration">
+                <div class="card-body">
+                    <h2 class="card-title">Your Weight</h2>
+                    <p class="card-text" aria-labelledby="weight">{{ user_data.weight }} kgs</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+                <img src="../static/img/weightgoal.jpg" class="img-thumbnail img-fluid" alt="Target weight illustration">
+                <div class="card-body">
+                    <h2 class="card-title">Your Target Weight</h2>
+                    <p class="card-text" aria-labelledby="target-weight">{{ user_data.target_weight }} kgs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="container-fluid mt-5" id="last-entries">
         <div>
             {{ graph_html|safe }}
 
-            <h2 class="my-4" style="color: white;">Last 10 Entries</h2>
-            <table class="table">
+            <h2 class="my-4 text-light">Last 10 Entries</h2>
+            <table class="table table-dark table-striped" aria-labelledby="last-entries">
                 <thead>
                     <tr>
-                        <th style="color: white;">Date</th>
-                        <th style="color: white;">Weight</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Weight</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for entry in last_10_entries %}
                         <tr>
-                            <td style="color: white;">{{ entry['date'] }}</td>
-                            <td style="color: white;">{{ entry['weight'] }}</td>
+                            <td>{{ entry['date'] }}</td>
+                            <td>{{ entry['weight'] }}</td>
                         </tr>
                     {% endfor %}
                 </tbody>
             </table>
         </div>
-    </div>
-</section>
-<section class="container-fluid">
-    <div class="container site-section" id="yoga-1">
-        <a href="{{ url_for('user_profile') }}" class="btn btn-primary">Update Data</a>
-    </div>
-</section>
-</html>
+    </section>
+
+    <section class="container mt-3">
+        <a href="{{ url_for('user_profile') }}" class="btn btn-primary" aria-label="Update Data">Update Data</a>
+    </section>
+</div>
 {% endblock content %}

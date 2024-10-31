@@ -1,9 +1,15 @@
-{% extends "layout.html" %} {% block content %}
+{% extends "layout.html" %} 
+{% block content %}
 <div class="container mb-4">
-  <h1 style="color: white">Your Favorite Exercises</h1>
-  <div class="row">
-    {% for exercise in favorite_exercises %} {% include 'favorite_card.html' %}
-    {% endfor %}
-  </div>
+    <header>
+        <h1 class="text-light" id="favorite-exercises">Your Favorite Exercises</h1>
+    </header>
+    <div class="row" role="list" aria-labelledby="favorite-exercises">
+        {% for exercise in favorite_exercises %} 
+            <div role="listitem">
+                {% include 'favorite_card.html' %}
+            </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock content %}
