@@ -10,13 +10,26 @@ def test_program_route_user_not_logged_in(client):
 def test_enroll_invalid_program_id(client):
     with client.session_transaction() as session:
         session['email'] = 'test@example.com'
+    with client.application.app_context():
+        # Insert a mock exercise and program plan into the database
+        client.application.mongo.db.your_exercise_collection.insert_one({
+            "email": "email",
+            "exercise_id": 2,
+            "image": "example_exercise.jpeg",
+            "video_link": "link",
+            "name": "Example Exercise",
+            "intro": "Example Exercise intro",
+            "description": "Example exercise description",
+            "plan_image": "example_exercise.jpeg",
+            "href": "example_exercise"
+        })
     response = client.post("/enroll", data={
         "exercise": "example_exercise",
         "program_id": "invalid_id"  # Non-existent ObjectId
     })
     # error handling
     assert response.status_code == 302  # Redirect status
-    assert response.location.endswith("/dashboard")  # Redirects to the dashboard
+    assert response.location.endswith("/program?exercise=example_exercise")  # Redirects to the example exercise program page
 
 def test_cancel_enrollment_not_enrolled(client):
     with client.session_transaction() as session:
