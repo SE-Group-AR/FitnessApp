@@ -689,10 +689,11 @@ def enroll():
     program_id = request.form.get('program_id')
     enroll_plan = current_app.mongo.db.program_plan.find_one({"_id": ObjectId(program_id)}, {"title"})
     
-    # Insert the enrollment entry
-    current_app.mongo.db.enrollment.insert({'email': email, 'program': ObjectId(program_id)})
-    flash(f' You have succesfully enrolled in the {enroll_plan.get("title")}! Click <a href="{url_for("my_programs")}">here</a> to view your enrolled activities.', "success")
-
+    if current_app.mongo.db.enrollment.count_documents(({'email': email, 'program': ObjectId(program_id)})) <= 0:
+        # Insert the enrollment entry
+        current_app.mongo.db.enrollment.insert({'email': email, 'program': ObjectId(program_id)})
+        flash(f' You have succesfully enrolled in the {enroll_plan.get("title")}! Click <a href="{url_for("my_programs")}">here</a> to view your enrolled activities.', "success")
+    
     return redirect(url_for('program', exercise=exercise))
 
 
