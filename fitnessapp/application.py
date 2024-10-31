@@ -687,13 +687,15 @@ def enroll():
     email = session.get('email')
     exercise = request.form.get('exercise')
     
-    program_id = request.form.get('program_id')
-    enroll_plan = current_app.mongo.db.program_plan.find_one({"_id": ObjectId(program_id)}, {"title"})
-    
-    if current_app.mongo.db.enrollment.count_documents(({'email': email, 'program': ObjectId(program_id)})) <= 0:
-        # Insert the enrollment entry
-        current_app.mongo.db.enrollment.insert({'email': email, 'program': ObjectId(program_id)})
-        flash(f' You have succesfully enrolled in the {enroll_plan.get("title")}! Click <a href="{url_for("my_programs")}">here</a> to view your enrolled activities.', "success")
+    try:
+        program_id = ObjectId(request.form.get('program_id'))
+        enroll_plan = current_app.mongo.db.program_plan.find_one({"_id": program_id}, {"title"})
+        if enroll_plan and current_app.mongo.db.enrollment.count_documents(({'email': email, 'program': ObjectId(program_id)})) <= 0:
+            # Insert the enrollment entry
+            current_app.mongo.db.enrollment.insert({'email': email, 'program': ObjectId(program_id)})
+            flash(f' You have succesfully enrolled in the {enroll_plan.get("title")}! Click <a href="{url_for("my_programs")}">here</a> to view your enrolled activities.', "success")
+    except Exception as e:
+        print(f"An error occurred: {e}")
     
     return redirect(url_for('program', exercise=exercise))
 
