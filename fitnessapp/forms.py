@@ -128,13 +128,6 @@ class HistoryForm(FlaskForm):
     submit = SubmitField('Fetch')
 
 
-class EnrollForm(FlaskForm):
-    """Form to enroll into a particular exercise/event"""
-    app = App()
-    mongo = app.mongo
-    submit = SubmitField('Enroll')
-
-
 class ResetPasswordForm(FlaskForm):
     """Form to reset the account password"""
     password = PasswordField('Password', validators=[DataRequired()])
@@ -158,6 +151,21 @@ class ReviewForm(FlaskForm):
 
 
 class EventForm(FlaskForm):
+    """
+    A form for scheduling an event with exercise selection, date, time, and friend invitation options.
+
+    Fields:
+        - exercise (SelectField): Dropdown to select an exercise from predefined choices.
+          Choices include: Tennis, Badminton, Table Tennis, Yoga, Hiking, Jogging, Basketball, Dance.
+        - date (DateField): Date selector for choosing the event date. Required field.
+        - start_time (TimeField): Time field for specifying the start time of the event. Required field.
+        - end_time (TimeField): Time field for specifying the end time of the event. Required field.
+        - invited_friend (SelectField): Dropdown to select a friend to invite, with choices populated dynamically.
+        - submit (SubmitField): Button to submit the form.
+
+    Usage:
+        - This form can be used in Flask templates to gather event scheduling details.
+    """
     exercise_choices = [('Tennis', 'Tennis'), ('Badminton', 'Badminton'), ('Table Tennis', 'Table Tennis'), ('Yoga', 'Yoga'),
                         ('Hiking', 'Hiking'), ('Jogging', 'Jogging'), ('Basketball', 'Basketball'), ('Dance', 'Dance')]
     exercise = SelectField('Select an exercise', choices=exercise_choices)
@@ -168,11 +176,6 @@ class EventForm(FlaskForm):
 
     end_time = TimeField('To', validators=[DataRequired()])
 
-    invited_friend = SelectField('Invite a friend', choices=[])
-
-    submit = SubmitField('Submit')
-
-class ProgramEnrollmentForm(FlaskForm):
     invited_friend = SelectField('Invite a friend', choices=[])
 
     submit = SubmitField('Submit')

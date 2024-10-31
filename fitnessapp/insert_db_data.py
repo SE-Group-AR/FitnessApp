@@ -165,6 +165,21 @@ def insertexercisedata():
         collection.update_one(query, update, upsert=True)
 
 def insert_program_plan_data():
+    """
+    Inserts or updates program plan data in the MongoDB 'program_plan' collection.
+
+    This function reads data from a JSON file (program_plan.json), and for each entry in the file, 
+    it inserts the data as a new document or updates an existing document based on the 'title' field. 
+    If a document with the same title exists, it will be updated; otherwise, a new document will be created.
+
+    Input:
+        - No direct parameters, but expects:
+            - A JSON file located at 'program_plan/program_plan.json' containing an array of program plan dictionaries.
+            - Each dictionary must include a 'title' key for identification.
+
+    Output:
+        - None. This function performs insertions/updates directly in the MongoDB database.
+    """
     # Connect to MongoDB
     collection = mongo.db["program_plan"]
 

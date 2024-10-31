@@ -37,7 +37,7 @@ from flask_mail import Mail, Message
 from flask_pymongo import PyMongo
 from tabulate import tabulate
 
-from .forms import HistoryForm, RegistrationForm, LoginForm, CalorieForm, UserProfileForm, EnrollForm, ReviewForm, EventForm
+from .forms import HistoryForm, RegistrationForm, LoginForm, CalorieForm, UserProfileForm, ReviewForm, EventForm
 from .insert_db_data import insertfooddata, insertexercisedata
 import schedule
 from threading import Thread
@@ -603,6 +603,23 @@ def dashboard():
 
 @bp.route('/add_favorite', methods=['POST'])
 def add_favorite():
+    """
+    Adds or removes an exercise from the user's favorites based on the specified action.
+
+    Input:
+        - JSON data from the POST request body:
+            - exercise_id (str): ID of the exercise to be added or removed from favorites.
+            - action (str): Specifies the action, either "add" to add the exercise to favorites or "remove" to remove it.
+        - session.get('email'): Retrieves the current user's email from the session.
+
+    Output:
+        - JSON response indicating the operation's status:
+            - {"status": "success"} if the action is successfully performed.
+            - {"status": "alreadyAdded"} if the exercise is already in the favorites when attempting to add.
+            - {"status": "error", "message": "Exercise not found"} if the specified exercise does not exist.
+        - Redirects to 'login' if the user is not logged in.
+        - Returns an error JSON response with status set to False if there is an internal server error.
+    """
     email = get_session = session.get('email')
     if session.get('email'):
         data = request.get_json()
@@ -654,6 +671,17 @@ def add_favorite():
 
 @bp.route('/favorites')
 def favorites():
+    """
+    Displays the user's favorite exercises.
+
+    Input:
+        - session.get('email'): Retrieves the current user's email from the session.
+
+    Output:
+        - Renders 'favorites.html' with:
+            - favorite_exercises: A list of the user's favorite exercises retrieved from the 'favorites' collection.
+        - Redirects to 'login' if the user is not logged in.
+    """
     email = session.get('email')
     if not email:
         # Redirect the user to the login page or show an error message
@@ -668,6 +696,22 @@ def favorites():
 
 @bp.route("/program", methods=['GET', 'POST'])
 def program():
+    """
+    Renders the program page with details of the selected exercise and available program plans, 
+    or redirects to the dashboard if the user is not logged in.
+
+    Input:
+        - No direct input, but relies on:
+            - session.get('email'): Retrieves the current user's email from the session to identify the user.
+            - request.args.get('exercise'): Retrieves the exercise identifier (href) from URL parameters.
+
+    Output:
+        - Renders 'program.html' with:
+            - exercise: Dictionary containing details about the selected exercise.
+            - program_plans: List of available program plans for the selected exercise.
+            - enrolled_program_ids: List of program IDs the user is enrolled in for display.
+        - Redirects to the 'dashboard' if the user is not logged in.
+    """
     email = session.get('email')
     if email is not None:
         exercise_href = request.args.get('exercise')
@@ -684,6 +728,18 @@ def program():
 
 @bp.route('/enroll', methods=['POST'])
 def enroll():
+    """
+    Enrolls the user in a selected program and displays a success message, or does nothing if the user is already enrolled.
+
+    Input:
+        - session.get('email'): Retrieves the current user's email from the session.
+        - request.form.get('exercise'): Retrieves the selected exercise's identifier from the form data.
+        - request.form.get('program_id'): Retrieves the program ID from the form data to enroll in that specific program.
+
+    Output:
+        - Redirects to the 'program' page for the selected exercise, with a flash message confirming successful enrollment.
+        - Inserts an entry into the 'enrollment' collection if the user is not already enrolled.
+    """
     email = session.get('email')
     exercise = request.form.get('exercise')
     
@@ -702,6 +758,18 @@ def enroll():
 
 @bp.route('/cancel_enrollment', methods=['POST'])
 def cancel_enrollment():
+    """
+    Cancels the user's enrollment in a specific program and displays a cancellation message.
+
+    Input:
+        - session.get('email'): Retrieves the current user's email from the session.
+        - request.form.get('exercise'): Retrieves the selected exercise's identifier from the form data.
+        - request.form.get('program_id'): Retrieves the program ID from the form data to cancel enrollment for that specific program.
+
+    Output:
+        - Redirects to the 'program' page for the selected exercise, with a flash message confirming the cancellation.
+        - Deletes the entry from the 'enrollment' collection for the specified program and user.
+    """
     email = session.get('email')
     exercise = request.form.get('exercise')
 
@@ -793,6 +861,16 @@ def submit_reviews():
 
 
 def getFriends(email):
+    """
+    Retrieves a list of friends for a given user based on accepted friend requests.
+
+    Input:
+        - email (str): The email of the user whose friends are being retrieved.
+
+    Output:
+        - List of strings containing the email addresses of the user's friends.
+          Each entry represents a friend where the user has sent a friend request that was accepted.
+    """
     friend_requests = list(current_app.mongo.db.friends.find(
         {'sender': email, 'accept': True}, {'sender', 'receiver', 'accept'}))
     my_friends = list()
@@ -805,7 +883,25 @@ def getFriends(email):
 
 @bp.route("/events", methods=['GET', 'POST'])
 def events():
+    """
+    Manages the display and creation of fitness event schedules for a user, including inviting friends to events.
 
+    Input:
+        - GET: Renders the events page with existing events and an empty event form.
+        - POST: Submits a new event and invites a friend if form validation passes.
+
+    Operations:
+        - Retrieves the user's email from the session to load events where the user is either the host or an invitee.
+        - Loads the list of friends for inviting them to events.
+        - If a POST request is made, validates and saves the new event to the database.
+
+    Output:
+        - Renders 'fitness/events.html' with:
+            - form: A prefilled EventForm for scheduling events.
+            - existing_events: List of events where the user is a host or invited.
+        - On form submission, adds the new event to the database and displays updated events.
+        - If the user is not logged in, returns a message indicating the user must log in.
+    """
     # TODO: invitation pending
     # TODO: add more friends into an event
     # TODO: format time input field
