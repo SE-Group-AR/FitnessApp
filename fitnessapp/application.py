@@ -672,13 +672,14 @@ def program():
     if email is not None:
         exercise_href = request.args.get('exercise')
         exercise = current_app.mongo.db.your_exercise_collection.find_one({"href": exercise_href})
-        program_plans = list(current_app.mongo.db.program_plan.find({"exercise": exercise_href}))
-        
-        enrolled_programs = list(current_app.mongo.db.enrollment.find({"email": email}))
-        enrolled_program_ids = [program['program'] for program in enrolled_programs]
-        return render_template('program.html', exercise=exercise, program_plans=program_plans, enrolled_program_ids=enrolled_program_ids)
-    else:
-        return redirect(url_for('dashboard'))
+        if exercise:
+            program_plans = list(current_app.mongo.db.program_plan.find({"exercise": exercise_href}))
+            
+            enrolled_programs = list(current_app.mongo.db.enrollment.find({"email": email}))
+            enrolled_program_ids = [program['program'] for program in enrolled_programs]
+            return render_template('program.html', exercise=exercise, program_plans=program_plans, enrolled_program_ids=enrolled_program_ids)
+    
+    return redirect(url_for('dashboard'))
 
 
 @bp.route('/enroll', methods=['POST'])
