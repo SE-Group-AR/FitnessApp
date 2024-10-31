@@ -133,13 +133,13 @@ def login():
                 flash(
                     'Login Unsuccessful. Please check username and password',
                     'danger')
-                return render_template(
-                    'login.html', title='Login', form=form), 400
+                return render_template('login.html', title='Login', form=form), 400
         else:
             LOGGER.info("okaaayyyy")
             return render_template('login.html', title='Login', form=form), 400
     else:
         return redirect(url_for('home'))
+    
 
 
 @bp.route("/logout", methods=['GET', 'POST'])
@@ -392,7 +392,11 @@ def friends():
     # Input: Email
     # Output: My friends, Pending Approvals, Sent Requests and Add new friends
     # ##########################
+
+
     email = session.get('email')
+    if not email:
+        return redirect(url_for('login'))
 
     myFriends = list(current_app.mongo.db.friends.find(
         {'sender': email, 'accept': True}, {'sender', 'receiver', 'accept'}))
@@ -429,10 +433,14 @@ def bmi_calci():
     bmi_category = ''
 
     if request.method == 'POST' and 'weight' in request.form:
-        weight = float(request.form.get('weight'))
-        height = float(request.form.get('height'))
-        bmi = calc_bmi(weight, height)
-        bmi_category = get_bmi_category(bmi)
+        try:
+            weight = float(request.form.get('weight'))
+            height = float(request.form.get('height'))
+            bmi = calc_bmi(weight, height)
+            bmi_category = get_bmi_category(bmi)
+        except ValueError:
+            bmi = ''
+            bmi_category = 'Invalid Category'
 
     return render_template("bmi_cal.html", bmi=bmi, bmi_category=bmi_category)
 
