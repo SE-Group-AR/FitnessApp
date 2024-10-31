@@ -135,7 +135,7 @@ Everyone participating in this project needs to abide by the aPAS - A Personal A
 
 
 ### <h2>Need Additional Help?</h2>
-<p>Due to any reason, if you feel like you have reservations related to the process, feel free to reach us out at [ENERGIZEapp2023@gmail.com] Github process can be a bit complex and we don't want to lose your valuable contributions because of that reason. We are extremely glad that you have visited us and will make our project much better.</p>
+<p>Due to any reason, if you feel like you have reservations related to the process, feel free to reach us out at [ENERGIZEapp2024@gmail.com] Github process can be a bit complex and we don't want to lose your valuable contributions because of that reason. We are extremely glad that you have visited us and will make our project much better.</p>
 
 
 ## References

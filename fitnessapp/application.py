@@ -62,7 +62,7 @@ def reminder_email():
             print(recipientlst)
 
             server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-            sender_email = "ENERGIZEapp2023@gmail.com"
+            sender_email = "ENERGIZEapp2024@gmail.com"
             sender_password = "jgny mtda gguq shnw"
 
             server.login(sender_email, sender_password)
@@ -481,7 +481,7 @@ def send_email():
     friend_email = str(friend_email).split(',')
     server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
     # Storing sender's email address and password
-    sender_email = "ENERGIZEapp2023@gmail.com"
+    sender_email = "ENERGIZEapp2024@gmail.com"
     sender_password = "jgny mtda gguq shnw"
 
     # Logging in with sender details
