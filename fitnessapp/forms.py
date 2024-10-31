@@ -3,12 +3,12 @@
 Copyright (c) 2023 Rajat Chandak, Shubham Saboo, Vibhav Deo, Chinmay Nayak
 This code is licensed under MIT license (see LICENSE for details)
 
-@author: Burnout
+@author: ENERGIZE
 
 
-This python file is used in and is part of the Burnout project.
+This python file is used in and is part of the ENERGIZE project.
 
-For more information about the Burnout project, visit:
+For more information about the ENERGIZE project, visit:
 https://github.com/VibhavDeo/FitnessApp
 
 """
@@ -95,7 +95,7 @@ class CalorieForm(FlaskForm):
     food = SelectField(
         'Select Food', choices=result)
 
-    burnout = StringField('Burn Out', validators=[DataRequired()])
+    ENERGIZE = StringField('Burn Out', validators=[DataRequired()])
     submit = SubmitField('Save')
 
 

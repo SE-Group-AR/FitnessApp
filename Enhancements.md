@@ -1,4 +1,4 @@
-# Added Features in the Burnout v4.0 (What's new?)
+# Added Features in the ENERGIZE v4.0 (What's new?)
 
 ### <li> Created a favourites tab to enable quick access to the user's favourite exercises
 

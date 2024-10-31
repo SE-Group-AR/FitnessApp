@@ -3,12 +3,12 @@
 Copyright (c) 2023 Rajat Chandak, Shubham Saboo, Vibhav Deo, Chinmay Nayak
 This code is licensed under MIT license (see LICENSE for details)
 
-@author: Burnout
+@author: ENERGIZE
 
 
-This python file is used in and is part of the Burnout project.
+This python file is used in and is part of the ENERGIZE project.
 
-For more information about the Burnout project, visit:
+For more information about the ENERGIZE project, visit:
 https://github.com/VibhavDeo/FitnessApp
 
 """
@@ -26,7 +26,7 @@ class Utilities:
 
     def send_email(self, email):
         msg = Message()
-        msg.subject = "BURNOUT - Reset Password Request"
+        msg.subject = "ENERGIZE - Reset Password Request"
         msg.sender = 'bogusdummy123@gmail.com'
         msg.recipients = [email]
         random = str(self.get_random_string(8))
