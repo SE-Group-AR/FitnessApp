@@ -708,9 +708,10 @@ def cancel_enrollment():
     program_id = request.form.get('program_id')
     enroll_plan = current_app.mongo.db.program_plan.find_one({"_id": ObjectId(program_id)}, {"title"})
     
-    # Remove the enrollment entry for this user and program
-    current_app.mongo.db.enrollment.delete_one({"email": email, "program": ObjectId(program_id)})
-    flash(f' You have cancelled the enrollment of {enroll_plan.get("title")}!', "warning")
+    if current_app.mongo.db.enrollment.count_documents(({'email': email, 'program': ObjectId(program_id)})) > 0:
+        # Remove the enrollment entry for this user and program
+        current_app.mongo.db.enrollment.delete_one({"email": email, "program": ObjectId(program_id)})
+        flash(f' You have cancelled the enrollment of {enroll_plan.get("title")}!', "warning")
 
     return redirect(url_for('program', exercise=exercise))
 
