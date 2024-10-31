@@ -124,3 +124,39 @@ def test_redirect_unauthenticated_program_route(client):
     response = client.get("/program?exercise=example_exercise")
     assert response.status_code == 302  # Redirect status
     assert response.location.endswith("/dashboard")  # Redirects to the dashboard
+
+def test_repeated_enrollments(client):
+    with client.session_transaction() as session:
+        session['email'] = 'test@example.com'
+    with client.application.app_context():
+        # Insert a mock program plan
+        client.application.mongo.db.your_exercise_collection.insert_one({
+            "email": "email",
+            "exercise_id": 2,
+            "image": "example_exercise.jpeg",
+            "video_link": "link",
+            "name": "Example Exercise",
+            "intro": "Example Exercise intro",
+            "description": "Example exercise description",
+            "plan_image": "example_exercise.jpeg",
+            "href": "example_exercise"
+        })
+        program_id = client.application.mongo.db.program_plan.insert_one({
+            "title": "Test Program",
+            "exercise": "example_exercise",
+            "month": "Oct",
+            "dates": ["2024-10-27", "2024-10-28", "2024-10-29", "2024-10-30", "2024-10-31", "2024-11-01", "2024-11-02"]
+        }).inserted_id
+    
+    # enroll the same program twice
+    client.post("/enroll", data={
+        "exercise": "example_exercise",
+        "program_id": str(program_id)
+    }, follow_redirects=True)
+    client.post("/enroll", data={
+        "exercise": "example_exercise",
+        "program_id": str(program_id)
+    }, follow_redirects=True)
+    
+    enrolled_programs = list(client.application.mongo.db.enrollment.find({"email": "test@example.com"}))
+    assert len(enrolled_programs) == 1
