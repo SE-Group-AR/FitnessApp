@@ -46,7 +46,7 @@ https://webresources.aaaab3n.moe/share/demo1101.mov
 
 # ENERGIZE - Your Wellness Companion
 
-ENERGIZE is an easy-to-use application designed to help users manage their daily calorie intake and expenditure, and it has now been enhanced with additional features. This all-in-one wellness app is not only a user-friendly calorie tracker but also offers a comprehensive suite of tools to support individuals in achieving their fitness and weight management goals.
+Energize is an easy-to-use web application designed to keep you motivated and in control of your fitness and health journey. With Energize, users can effortlessly monitor their progress, follow personalized workout plans, and gain valuable insights to live a healthier lifestyle. Whether you are new to fitness or an enthusiast, Energize offers the tools and guidance you need to achieve your goals, all within an intuitive and engaging interface.
 
 <img src = "https://github.com/CSC510-GROUP-40/FitnessApp/assets/145216300/e4fc29ea-253c-4bfc-803c-80bf55193044" width="700px">
 
@@ -68,6 +68,18 @@ ENERGIZE is an easy-to-use application designed to help users manage their daily
 7. **Tracking User History:** ENERGIZE enables users to maintain a history of their fitness and dietary activities, providing insights into their progress over time and allowing for data-driven adjustments.
 
 8. **Reviews:** Users can leave reviews and feedback on the fitness programs they've participated in, sharing their experiences with the community and helping others make informed choices.
+
+9. **Enhanced Program Plans:** Our streamlined enrollment process makes signing up for programs more intuitive and user-friendly.
+
+10. **View Enrollments:** Conveniently track all your current enrollments in one place, simplifying participation management.
+
+11. **Create Events:** Easily organize and manage events within the app, fostering greater community engagement.
+    
+12. **Email Reminders:** Stay organized with timely email reminders for upcoming events, ensuring you never miss an important date.
+
+13. **Google Sign-In:** Log in effortlessly using your Google account for quick access to all features without needing to remember multiple passwords.
+
+14. **UI Improvements:** Experience our newly redesigned user interface with an updated navbar and menu, enhancing navigation and providing improved page responsiveness for a seamless experience across devices.
 
 This document serves as a comprehensive reference point for users, giving them insight into the functionalities of ENERGIZE and encouraging them to participate in its development as an open-source software project. As an open-source project, the community can contribute additional features and enhancements to make ENERGIZE even more robust and tailored to individual needs before its official market release. Furthermore, it assists developers by providing a clear understanding of the codebase and serves as a valuable resource for the project's continued development.
 
