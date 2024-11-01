@@ -55,7 +55,7 @@ soupsieve==2.6
 tabulate==0.8.9
 tenacity==9.0.0
 tomli==2.0.2
-tzdata==2024.3
+tzdata==2023.3
 urllib3==2.2.3
 vine==5.1.0
 wcwidth==0.2.13
