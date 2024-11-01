@@ -1,7 +1,7 @@
 
 
 """
-Copyright (c) 2024 Arkoh Lawrence, Lingjun Liu, Habib Mohammed
+Copyright (c) 2024 Lawrence Arkoh, Lingjun Liu, Habib Mohammed
 This code is licensed under MIT license (see LICENSE for details)
 
 @author: ENERGIZE
