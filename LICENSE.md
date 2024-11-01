@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2023 Vibhav Deo, Rajat Chandak, Shubham Saboo, Chinmay Nayak
+Copyright (c) 2024 Vibhav Deo, Rajat Chandak, Shubham Saboo, Chinmay Nayak
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
