@@ -284,7 +284,9 @@ https://github.com/CSC510-GROUP-40/FitnessApp
 <center>
   <table>
     <tr>
-        <td align="center"><img src="https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/static/img/IMG-8118.jpg" width="300px;" alt=""/><br /><sub><b>Left to Right -  <a href="https://github.com/nayaksyndrome">Chinmay Nayak</a>,  <a href="https://github.com/Shubham-Saboo">Shubham Saboo</a>, <a href="https://github.com/RajatChandak2000">  Rajat Chandak</a>,  <a href="https://github.com/VibhavDeo">Vibhav Deo</a></b></sub><br /></td>
+            <td align="center"><a href="https://github.com/habib-itopa"><img src="https://avatars.githubusercontent.com/u/60567820?v=4" width="75px;" alt=""/><br /><sub><b>Habib Mohammed</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/kofiarkoh"><img src="https://avatars.githubusercontent.com/u/47466360?v=4" width="75px;" alt=""/><br /><sub><b>Lawrence Arkoh</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/lingjunliu"><img src="https://avatars.githubusercontent.com/u/18046854?v=4" width="75px;" alt=""/><br /><sub><b>Lingjun Liu</b></sub></a><br /></td>
     </tr>
   </table>
 </center>
