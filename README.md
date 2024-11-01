@@ -11,6 +11,8 @@ https://drive.google.com/file/d/1_qcWgYOCQ_Epj31jZ2Bs1_uOPPfvMzI6/view
 [![Python application](https://github.com/CSC510-GROUP-40/FitnessApp/actions/workflows/python-app.yml/badge.svg)](https://github.com/CSC510-GROUP-40/FitnessApp/actions/workflows/python-app.yml)
 [![pylint](https://img.shields.io/badge/PyLint-6.32-orange?logo=python&logoColor=white)](https://github.com/CSC510-GROUP-40/FitnessApp/actions/runs/11636249154)
 [![autopep8](./autopep8.svg)](https://github.com/CSC510-GROUP-40/FitnessApp/actions/runs/11636249154)
+[![Syntax Checker](https://github.com/CSC510-GROUP-40/FitnessApp/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/CSC510-GROUP-40/FitnessApp/actions/workflows/syntax_checker.yml)
+[![Style Checker](https://github.com/CSC510-GROUP-40/FitnessApp/actions/workflows/style_checker.yml/badge.svg)](https://github.com/CSC510-GROUP-40/FitnessApp/actions/workflows/style_checker.yml)
 [![Tests On Push](http://github.com/VibhavDeo/FitnessApp/actions/workflows/unit_test.yml/badge.svg)](https://github.com/CSC510-GROUP-40/FitnessApp/actions/workflows/unit_test.yml)
 [![Coverage Status](https://coveralls.io/repos/github/CSC510-GROUP-40/FitnessApp/badge.svg?branch=develop)](https://coveralls.io/github/CSC510-GROUP-40/FitnessApp?branch=develop)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/VibhavDeo/FitnessApp)
