@@ -27,7 +27,7 @@ Everyone participating in this project needs to abide by the aPAS - A Personal A
 
   ## Reporting Bugs
 
-  This section guides you through submitting a bug report for SE Group 53 of Fall 2024. 
+  This section guides you through submitting a bug report for SE Group 40 of Fall 2024. 
 
   When you are creating a bug report, please ensure that you include as many details as possible to understand the issue.
 
