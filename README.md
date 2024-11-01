@@ -42,7 +42,8 @@ https://webresources.aaaab3n.moe/share/demo1101.mov
 
 # ENERGIZE
 
-![WhatsApp Image 2021-09-28 at 2 48 00 PM](https://user-images.githubusercontent.com/25662536/135546154-cfae1d2e-439a-4edc-b0bb-57f693ef5a83.jpeg)
+[![Video Title](https://img.youtube.com/vi/y2rtGeuFNoc/0.jpg)](https://www.youtube.com/watch?v=y2rtGeuFNoc)
+
 
 # ENERGIZE - Your Wellness Companion
 
