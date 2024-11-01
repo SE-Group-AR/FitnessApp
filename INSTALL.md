@@ -6,7 +6,7 @@ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows
 
 - Git Clone the Repository
 
-  `git clone https://github.com/VibhavDeo/FitnessApp.git`
+  `git clone https://github.com/CSC510-GROUP-40/FitnessApp.git`
   
 
 - Install the required packages by running the following command in the terminal
