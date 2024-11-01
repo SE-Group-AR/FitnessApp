@@ -1,6 +1,6 @@
 # Link to demo/walkthrough video:
 
-https://youtu.be/CvR6jDlQnB8
+https://webresources.aaaab3n.moe/share/demo1101.mov
 <br>
 <br>
 
