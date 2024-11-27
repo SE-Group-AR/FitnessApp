@@ -1,6 +1,6 @@
 # Link to demo/walkthrough video:
 
-https://drive.google.com/file/d/1_qcWgYOCQ_Epj31jZ2Bs1_uOPPfvMzI6/view
+https://drive.google.com/drive/folders/1BZY1lUN5dkPR8Y71-FvrRWU577qadCfo
 <br>
 <br>
 
