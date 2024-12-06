@@ -7,36 +7,36 @@ https://drive.google.com/drive/folders/1BZY1lUN5dkPR8Y71-FvrRWU577qadCfo
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14025468.svg)](https://doi.org/10.5281/zenodo.14025468)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/CSC510-GROUP-40/FitnessApp/develop)
-[![Python application](https://github.com/CSC510-GROUP-40/FitnessApp/actions/workflows/python-app.yml/badge.svg)](https://github.com/CSC510-GROUP-40/FitnessApp/actions/workflows/python-app.yml)
-[![pylint](https://img.shields.io/badge/PyLint-6.32-orange?logo=python&logoColor=white)](https://github.com/CSC510-GROUP-40/FitnessApp/actions/runs/11636721242)
-[![autopep8](./autopep8.svg)](https://github.com/CSC510-GROUP-40/FitnessApp/actions/runs/11636721242)
-[![Syntax Checker](https://github.com/CSC510-GROUP-40/FitnessApp/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/CSC510-GROUP-40/FitnessApp/actions/workflows/syntax_checker.yml)
-[![Style Checker](https://github.com/CSC510-GROUP-40/FitnessApp/actions/workflows/style_checker.yml/badge.svg)](https://github.com/CSC510-GROUP-40/FitnessApp/actions/workflows/style_checker.yml)
-[![Tests On Push](http://github.com/VibhavDeo/FitnessApp/actions/workflows/unit_test.yml/badge.svg)](https://github.com/CSC510-GROUP-40/FitnessApp/actions/workflows/unit_test.yml)
-[![Coverage Status](https://coveralls.io/repos/github/CSC510-GROUP-40/FitnessApp/badge.svg?branch=develop)](https://coveralls.io/github/CSC510-GROUP-40/FitnessApp?branch=develop)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/SE-Group-AR/FitnessApp/develop)
+[![Python application](https://github.com/SE-Group-AR/FitnessApp/actions/workflows/python-app.yml/badge.svg)](https://github.com/SE-Group-AR/FitnessApp/actions/workflows/python-app.yml)
+[![pylint](https://img.shields.io/badge/PyLint-6.32-orange?logo=python&logoColor=white)](https://github.com/SE-Group-AR/FitnessApp/actions/runs/11636721242)
+[![autopep8](./autopep8.svg)](https://github.com/SE-Group-AR/FitnessApp/actions/runs/11636721242)
+[![Syntax Checker](https://github.com/SE-Group-AR/FitnessApp/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/SE-Group-AR/FitnessApp/actions/workflows/syntax_checker.yml)
+[![Style Checker](https://github.com/SE-Group-AR/FitnessApp/actions/workflows/style_checker.yml/badge.svg)](https://github.com/SE-Group-AR/FitnessApp/actions/workflows/style_checker.yml)
+[![Tests On Push](http://github.com/VibhavDeo/FitnessApp/actions/workflows/unit_test.yml/badge.svg)](https://github.com/SE-Group-AR/FitnessApp/actions/workflows/unit_test.yml)
+[![Coverage Status](https://coveralls.io/repos/github/SE-Group-AR/FitnessApp/badge.svg?branch=develop)](https://coveralls.io/github/SE-Group-AR/FitnessApp?branch=develop)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/VibhavDeo/FitnessApp)
 
 <!--Badges-->
-<a href="https://github.com/CSC510-GROUP-40/FitnessApp/fork" target="blank">
+<a href="https://github.com/SE-Group-AR/FitnessApp/fork" target="blank">
 <img src="https://img.shields.io/github/forks/VibhavDeo/FitnessApp?style=flat-square" alt="FitnessApp/forks"/>
 </a>
-<a href="https://github.com/CSC510-GROUP-40/FitnessApp/stargazers" target="blank">
+<a href="https://github.com/SE-Group-AR/FitnessApp/stargazers" target="blank">
 <img src="https://img.shields.io/github/stars/VibhavDeo/FitnessApp?style=flat-square" alt="FitnessApp stars"/>
 </a>
-<a href="https://github.com/CSC510-GROUP-40/FitnessApp/issues" target="blank">
+<a href="https://github.com/SE-Group-AR/FitnessApp/issues" target="blank">
 <img src="https://img.shields.io/github/issues/VibhavDeo/FitnessApp?style=flat-square" alt="FitnessApp issues"/>
 </a>
-<a href="https://github.com/CSC510-GROUP-40/FitnessApp/issues" target="blank">
+<a href="https://github.com/SE-Group-AR/FitnessApp/issues" target="blank">
 <img src="https://img.shields.io/github/issues-closed/VibhavDeo/FitnessApp" alt="FitnessApp issues closed"/>
 </a>
-<a href="https://github.com/CSC510-GROUP-40/FitnessApp/pulls" target="blank">
+<a href="https://github.com/SE-Group-AR/FitnessApp/pulls" target="blank">
 <img src="https://img.shields.io/github/issues-pr/VibhavDeo/FitnessApp?style=flat-square" alt="cheapBuy pull-requests"/>
 </a>
-<a href="https://github.com/CSC510-GROUP-40/FitnessApp/graphs/contributors" alt="Contributors">
+<a href="https://github.com/SE-Group-AR/FitnessApp/graphs/contributors" alt="Contributors">
 <img src="https://img.shields.io/github/contributors/VibhavDeo/FitnessApp" /></a>
 
-<a href="https://github.com/CSC510-GROUP-40/FitnessApp/graphs/commit-activity" alt="commit activity">
+<a href="https://github.com/SE-Group-AR/FitnessApp/graphs/commit-activity" alt="commit activity">
 <img src="https://img.shields.io/github/commit-activity/w/VibhavDeo/FitnessApp" /></a>
 
 <a href="https://img.shields.io/github/repo-size/VibhavDeo/FitnessApp" alt="repo size">
@@ -50,7 +50,7 @@ https://drive.google.com/drive/folders/1BZY1lUN5dkPR8Y71-FvrRWU577qadCfo
 
 ENERGIZE is an easy-to-use application designed to help users manage their daily calorie intake and expenditure, and it has now been enhanced with additional features. This all-in-one wellness app is not only a user-friendly calorie tracker but also offers a comprehensive suite of tools to support individuals in achieving their fitness and weight management goals.
 
-<img src = "https://github.com/CSC510-GROUP-40/FitnessApp/assets/145216300/e4fc29ea-253c-4bfc-803c-80bf55193044" width="700px">
+<img src = "https://github.com/SE-Group-AR/FitnessApp/assets/145216300/e4fc29ea-253c-4bfc-803c-80bf55193044" width="700px">
 
 
 ## Key Features:
@@ -135,59 +135,59 @@ This document serves as a comprehensive reference point for users, giving them i
 
 ## Login
 
-<img src=https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/static/img/loginPic.PNG>
+<img src=https://github.com/SE-Group-AR/FitnessApp/blob/main/static/img/loginPic.PNG>
 
 ## Dashboard
 
-<img src=https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/static/img/dashboardPic.PNG>
+<img src=https://github.com/SE-Group-AR/FitnessApp/blob/main/static/img/dashboardPic.PNG>
 
 ## Excercise Section
 
-<img src=https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/static/img/excercisePic.PNG>
+<img src=https://github.com/SE-Group-AR/FitnessApp/blob/main/static/img/excercisePic.PNG>
 
 ## Must Try Workout Section
 
-<img src=https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/static/img/musttryworkoutPic.PNG>
+<img src=https://github.com/SE-Group-AR/FitnessApp/blob/main/static/img/musttryworkoutPic.PNG>
 
 ## Popular Workout Section
 
-<img src=https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/static/img/popularworkoutPic.PNG>
+<img src=https://github.com/SE-Group-AR/FitnessApp/blob/main/static/img/popularworkoutPic.PNG>
 
 ## Enter Calories
 
-<img src=https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/static/img/historyPic.PNG>
+<img src=https://github.com/SE-Group-AR/FitnessApp/blob/main/static/img/historyPic.PNG>
 
 ## Check History
 
-<img src=https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/static/img/caloriesPic.PNG>
+<img src=https://github.com/SE-Group-AR/FitnessApp/blob/main/static/img/caloriesPic.PNG>
 
 ## Add Friends
 
-<img src=https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/static/img/friendsPic.PNG>
+<img src=https://github.com/SE-Group-AR/FitnessApp/blob/main/static/img/friendsPic.PNG>
 
 ## Calculate BMI
 
-<img src=https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/static/img/bmiPic.PNG>
+<img src=https://github.com/SE-Group-AR/FitnessApp/blob/main/static/img/bmiPic.PNG>
 
 ## Add an Excercise to Favourites
 
-<img src=https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/static/img/favPic.PNG>
+<img src=https://github.com/SE-Group-AR/FitnessApp/blob/main/static/img/favPic.PNG>
 
 ## Submit a Review
 
-<img src=https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/static/img/reviewPic.jpeg>
+<img src=https://github.com/SE-Group-AR/FitnessApp/blob/main/static/img/reviewPic.jpeg>
 
 ## View User Profile
 
-<img src=https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/static/img/profile1.0.jpeg>
+<img src=https://github.com/SE-Group-AR/FitnessApp/blob/main/static/img/profile1.0.jpeg>
 
 ## View User Profile 2.0
 
-<img src=https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/static/img/profile2.0.jpeg>
+<img src=https://github.com/SE-Group-AR/FitnessApp/blob/main/static/img/profile2.0.jpeg>
 
 ## Update Your Profile
 
-<img src=https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/static/img/updateProfile.jpeg>
+<img src=https://github.com/SE-Group-AR/FitnessApp/blob/main/static/img/updateProfile.jpeg>
 
 
 # Steps for execution
@@ -198,7 +198,7 @@ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows
 
 - Git Clone the Repository
 
-  `git clone https://github.com/CSC510-GROUP-40/FitnessApp.git`
+  `git clone https://github.com/SE-Group-AR/FitnessApp.git`
   
 
 - Install the required packages by running the following command in the terminal
@@ -271,36 +271,35 @@ If you get error regarding any of the following packages - pymongo and bson, the
 # Source Code
 
 Link to the repository:
-https://github.com/CSC510-GROUP-40/FitnessApp
+https://github.com/SE-Group-AR/FitnessApp
 
 # Future Scope
 
-1. Bug fixes
-2. Timer for every workout
-3. Email verification
-4. Login with social media
-5. Bot updates
+1. Timer for every workout
+2. Login with social media
+3. Bot updates
 
 # Team Members
 
 <center>
   <table>
     <tr>
-            <td align="center"><a href="https://github.com/habib-itopa"><img src="https://avatars.githubusercontent.com/u/60567820?v=4" width="75px;" alt=""/><br /><sub><b>Habib Mohammed</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/kofiarkoh"><img src="https://avatars.githubusercontent.com/u/47466360?v=4" width="75px;" alt=""/><br /><sub><b>Lawrence Arkoh</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/lingjunliu"><img src="https://avatars.githubusercontent.com/u/18046854?v=4" width="75px;" alt=""/><br /><sub><b>Lingjun Liu</b></sub></a><br /></td>
+      <td><a href="https://github.com/sE-Group-AR/FitnessApp">Project 3</a></td>
+      <td align="center"><a href="https://github.com/mpatel029/"><br /><sub><b>Meet Patel</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/Anchita15/"><br /><sub><b>Anchita Ramani</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/AbhinavJ02/"><br /><sub><b>Abhinav Jami</b></sub></a><br /></td>
     </tr>
   </table>
 </center>
 
 # Contribution
 
-Please refer the [CONTRIBUTING.md](https://github.com/CSC510-GROUP-40/FitnessApp/blob/main/CONTRIBUTING.md) file for instructions on how to contribute to our repository.
+Please refer the [CONTRIBUTING.md](https://github.com/SE-Group-AR/FitnessApp/blob/main/CONTRIBUTING.md) file for instructions on how to contribute to our repository.
 
   <p align="center">
-    <a href="https://github.com/CSC510-GROUP-40/FitnessApp/issues/new/choose">Report Bug</a>
+    <a href="https://github.com/SE-Group-AR/FitnessApp/issues/new/choose">Report Bug</a>
     /
-    <a href="https://github.com/CSC510-GROUP-40/FitnessApp/issues/new/choose">Request Feature</a>
+    <a href="https://github.com/SE-Group-AR/FitnessApp/issues/new/choose">Request Feature</a>
   </p>
 
 # License
