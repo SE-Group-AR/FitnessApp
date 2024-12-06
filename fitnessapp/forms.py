@@ -1,6 +1,6 @@
 
 """
-Copyright (c) 2024 Lawrence Arkoh, Lingjun Liu, Habib Mohammed
+Copyright (c) 2024 Meet Patel, Anchita Ramani, Abhinav Jami
 This code is licensed under MIT license (see LICENSE for details)
 
 @author: ENERGIZE
@@ -9,7 +9,7 @@ This code is licensed under MIT license (see LICENSE for details)
 This python file is used in and is part of the ENERGIZE project.
 
 For more information about the ENERGIZE project, visit:
-https://github.com/CSC510-GROUP-40/FitnessApp
+https://github.com/SE-Group-AR/FitnessApp
 
 """
 # from datetime import date

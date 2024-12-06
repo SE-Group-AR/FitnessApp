@@ -1,6 +1,6 @@
 
 """
-Copyright (c) 2024 Lawrence Arkoh, Lingjun Liu, Habib Mohammed
+Copyright (c) 2024 Meet Patel, Anchita Ramani, Abhinav Jami
 This code is licensed under MIT license (see LICENSE for details)
 
 @author: ENERGIZE

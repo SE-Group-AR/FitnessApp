@@ -1,6 +1,6 @@
 
 """
-Copyright (c) 2024 Lawrence Arkoh, Lingjun Liu, Habib Mohammed
+Copyright (c) 2024 Meet Patel, Anchita Ramani, Abhinav Jami
 This code is licensed under MIT license (see LICENSE for details)
 
 @author: ENERGIZE
@@ -9,7 +9,7 @@ This code is licensed under MIT license (see LICENSE for details)
 This python file is used in and is part of the ENERGIZE project.
 
 For more information about the ENERGIZE project, visit:
-https://github.com/CSC510-GROUP-40/FitnessApp
+https://github.com/SE-Group-AR/FitnessApp
 
 """
 import smtplib
@@ -62,8 +62,8 @@ def reminder_email():
             print(recipientlst)
 
             server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-            sender_email = "ENERGIZEapp2024@gmail.com"
-            sender_password = "jgny mtda gguq shnw"
+            sender_email = "Energize2024.2@gmail.com"
+            sender_password = "NCSURockXXX"
 
             server.login(sender_email, sender_password)
             message = 'Subject: Daily Reminder to Exercise'
